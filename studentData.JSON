@@ -1,0 +1,119 @@
+{ 
+  "groups": [],
+  "Roles": [
+    {
+      "id": 1,
+      "name": "Team Leader"
+    },
+    {
+      "id": 2,
+      "name": "Developer"
+    },
+    {
+      "id": 3,
+      "name": "Business Analyst"
+    },
+    {
+      "id": 4,
+      "name": "Quality Assurance"
+    }
+  ],
+  "students": [
+    {
+      "studentID": "1234",
+      "name": "Jamie",
+      "score": 50,
+      "preferredRole": null
+    },
+    {
+      "studentID": "4321", 
+      "name": "Skel",
+      "score": 75,
+      "preferredRole": null
+    },
+    {
+      "studentID": "5432", 
+      "name": "Mitch",
+      "score": 85,
+      "preferredRole": null
+    },
+    {
+      "studentID": "8765",
+      "name": "Moe",
+      "score": 42,
+      "preferredRole": null
+    },
+    {
+      "studentID": "6472", 
+      "name": "Lucie",
+      "score": 68,
+      "preferredRole": null
+    },
+    {
+      "studentID": "7115", 
+      "name": "Dave",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "0254", 
+      "name": "Jim",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "4821", 
+      "name": "Thomas",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "5503", 
+      "name": "Alex",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "0952", 
+      "name": "Emma",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "7300", 
+      "name": "Liam",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "4913", 
+      "name": "Joe",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "4481", 
+      "name": "Kris",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "0073", 
+      "name": "Daniel",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "4611", 
+      "name": "Sarah",
+      "score": 54,
+      "preferredRole": null
+    },
+    {
+      "studentID": "3115", 
+      "name": "Jane",
+      "score": 54,
+      "preferredRole": null
+    }
+  ]
+}
