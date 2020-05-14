@@ -1,3 +1,4 @@
+'use strict';
 const objStudents = [
     {
       username: 'Test',
@@ -11,6 +12,7 @@ const objStudents = [
     },
   ];
 
+let studentsData;
 function getInfo() {
   const username = document.getElementById('username').value;
   const password = document.getElementById('password').value;
@@ -39,70 +41,88 @@ function getInfo() {
     }
   }
 }
-
 function loadJSON(callback) {
-  const xobj = new XMLHttpRequest();
-  xobj.overrideMimeType('application/json');
-  xobj.open('GET', 'studentData.json', true); // Replace 'my_data' with the path to your file
-  xobj.onreadystatechange = function () {
-    if (xobj.readyState == 4 && xobj.status == '200') {
-      callback(xobj.responseText);
+  const xObj = new XMLHttpRequest();
+  xObj.overrideMimeType('application/json');
+  xObj.open('GET', 'studentData.json', true); // Replace 'my_data' with the path to your file
+  xObj.onreadystatechange = function () {
+    if (xObj.readyState == 4 && xObj.status == '200') {
+      callback(xObj.responseText);
     }
   };
-  xobj.send(null);
+  xObj.send(null);
 }
-function buildHtml(studentsData) {
-  console.log(studentsData);
-  let i;
-  for (i = 0; i < studentsData.bandA.length; i++) {
-    // Write HTML to the page
-    console.log(studentsData.bandA[i]);
+function addRow(isLecturer = false, name, preferredRole, score) {
+  if (!document.getElementsByTagName) return;
+  let tabBody = document.getElementById('students');
+  let row = document.createElement('tr');
+  let cell1 = document.createElement('td');
+  let cell2 = document.createElement('td');
+  let textNode1 = document.createTextNode(name);
+  let textNode2 = document.createTextNode(preferredRole);
+  cell1.appendChild(textNode1);
+  cell2.appendChild(textNode2);
+  row.appendChild(cell1);
+  row.appendChild(cell2);
+  if (isLecturer) {
+    let cell3 = document.createElement('td');
+    let textNode3 = document.createTextNode(score);
+    cell3.appendChild(textNode3);
+    row.appendChild(cell3);
   }
-  for (i = 0; i < studentsData.bandB.length; i++) {
-    // Write HTML to the page
-    console.log(studentsData.bandB[i]);
-  }
-  for (i = 0; i < studentsData.bandC.length; i++) {
-    // Write HTML to the page
-    console.log(studentsData.bandC[i]);
-  }
-  for (i = 0; i < studentsData.bandD.length; i++) {
-    // Write HTML to the page
-    console.log(studentsData.bandD[i]);
-  }
+
+  tabBody.appendChild(row);
 }
-function sortStudents(studentsData) {
-  const newStudentData = {
-    bandA: (array = []),
-    bandB: (array = []),
-    bandC: (array = []),
-    bandD: (array = []),
-  };
-  let i;
-  for (i = 0; i < studentsData.length; i++) {
-    if (studentsData[i].score <= 50) {
-      newStudentData.bandD.push(studentsData[i]);
-    }
-    if (studentsData[i].score <= 50 && studentsData[i].score <= 50) {
-      newStudentData.bandC.push(studentsData[i]);
-    }
-    if (studentsData[i].score <= 50 && studentsData[i].score <= 50) {
-      newStudentData.bandB.push(studentsData[i]);
-    }
-    if (studentsData[i].score >= 90) {
-      newStudentData.bandA.push(studentsData[i]);
-    }
-  }
-  buildHtml(newStudentData);
+function buildStudentList(studentsData, isLecturer = false) {
+  studentsData.forEach((studentData) => {
+    addRow(
+      isLecturer,
+      studentData.name,
+      studentData.preferredRole,
+      studentData.score
+    );
+  });
 }
 function studentsInit() {
   loadJSON(function (response) {
-    // Parse JSON string into object
-    var actual_JSON = JSON.parse(response);
-    sortStudents(actual_JSON.students);
+    const JSONData = JSON.parse(response);
+    buildStudentList(JSONData.students);
   });
 }
-function lecturerInit() {}
+function lecturerInit() {
+  loadJSON(function (response) {
+    const JSONData = JSON.parse(response);
+    buildStudentList(JSONData.students, true);
+    studentsData = JSONData.students;
+  });
+}
+function createGroup() {
+  function sortStudents(studentsData) {
+    const newStudentData = {
+      bandA: (array = []),
+      bandB: (array = []),
+      bandC: (array = []),
+      bandD: (array = []),
+    };
+    let i;
+    for (i = 0; i < studentsData.length; i++) {
+      if (studentsData[i].score <= 50) {
+        newStudentData.bandD.push(studentsData[i]);
+      }
+      if (studentsData[i].score <= 50 && studentsData[i].score <= 50) {
+        newStudentData.bandC.push(studentsData[i]);
+      }
+      if (studentsData[i].score <= 50 && studentsData[i].score <= 50) {
+        newStudentData.bandB.push(studentsData[i]);
+      }
+      if (studentsData[i].score >= 90) {
+        newStudentData.bandA.push(studentsData[i]);
+      }
+    }
+  }
+  console.log('studentsData', studentsData);
+  console.log('create the groups you lazy fuck');
+}
 
 function logOut() {
   sessionStorage.clear();

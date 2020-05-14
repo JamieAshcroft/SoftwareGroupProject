@@ -1,4 +1,4 @@
-{ 
+{
   "groups": [],
   "Roles": [
     {
@@ -26,94 +26,94 @@
       "preferredRole": null
     },
     {
-      "studentID": "4321", 
+      "studentID": "4321",
       "name": "Skel",
       "score": 75,
-      "preferredRole": null
+      "preferredRole": "Developer"
     },
     {
-      "studentID": "5432", 
+      "studentID": "5432",
       "name": "Mitch",
       "score": 85,
-      "preferredRole": null
+      "preferredRole": "Quality Assurance"
     },
     {
       "studentID": "8765",
       "name": "Moe",
       "score": 42,
-      "preferredRole": null
+      "preferredRole": "Business Analyst"
     },
     {
-      "studentID": "6472", 
+      "studentID": "6472",
       "name": "Lucie",
       "score": 68,
-      "preferredRole": null
+      "preferredRole": "Business Analyst"
     },
     {
-      "studentID": "7115", 
+      "studentID": "7115",
       "name": "Dave",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Developer"
     },
     {
-      "studentID": "0254", 
+      "studentID": "0254",
       "name": "Jim",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Team Leader"
     },
     {
-      "studentID": "4821", 
+      "studentID": "4821",
       "name": "Thomas",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Quality Assurance"
     },
     {
-      "studentID": "5503", 
+      "studentID": "5503",
       "name": "Alex",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Team Leader"
     },
     {
-      "studentID": "0952", 
+      "studentID": "0952",
       "name": "Emma",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Quality Assurance"
     },
     {
-      "studentID": "7300", 
+      "studentID": "7300",
       "name": "Liam",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Team Leader"
     },
     {
-      "studentID": "4913", 
+      "studentID": "4913",
       "name": "Joe",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Business Analyst"
     },
     {
-      "studentID": "4481", 
+      "studentID": "4481",
       "name": "Kris",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Quality Assurance"
     },
     {
-      "studentID": "0073", 
+      "studentID": "0073",
       "name": "Daniel",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Developer"
     },
     {
-      "studentID": "4611", 
+      "studentID": "4611",
       "name": "Sarah",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Business Analyst"
     },
     {
-      "studentID": "3115", 
+      "studentID": "3115",
       "name": "Jane",
       "score": 54,
-      "preferredRole": null
+      "preferredRole": "Developer"
     }
   ]
 }

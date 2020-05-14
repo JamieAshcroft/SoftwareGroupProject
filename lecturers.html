@@ -6,8 +6,18 @@
     <meta content="width=device-width, initial-scale=1" name="viewport" />
     <link href="css\main.css" rel="stylesheet" type="text/css" />
   </head>
-  <body>
+  <body onload="lecturerInit()">
     <h1>Lecturer View</h1>
+    <table>
+      <th>
+        <tr>
+          <th>Name</th>
+          <th>Preferred Role</th>
+          <th>Score</th>
+        </tr>
+      </th>
+      <tbody id="students"></tbody>
+    </table>
     <button type="button" onclick="createGroup()">Generate Groups</button>
     <script src="js/app.js"></script>
   </body>
